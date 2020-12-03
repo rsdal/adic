@@ -1,6 +1,6 @@
-﻿using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
+using Adic;
 
 namespace Adic.Extenstions.BindingsPrinter {
     /// <summary>
@@ -44,15 +44,11 @@ namespace Adic.Extenstions.BindingsPrinter {
             GUILayout.Space(WINDOW_MARGIN);
             GUILayout.BeginVertical();
 			
-            this.scrollPosition = GUILayout.BeginScrollView(this.scrollPosition);
+            this.scrollPosition = GUILayout.BeginScrollView(scrollPosition);
 
             GUILayout.Space(WINDOW_MARGIN);
             GUILayout.Label("Adic Bindings Printer", EditorStyles.title);
             GUILayout.Label("Displays all bindings of all available containers", EditorStyles.containerInfo);            
-
-            if (GUILayout.Button("Copy to clipboard")) {
-                this.CopyToClipboard();
-            }
 
             // Display the containers and their bindings.
             for (int dataIndex = 0; dataIndex < ContextRoot.containersData.Count; dataIndex++) {
@@ -89,29 +85,6 @@ namespace Adic.Extenstions.BindingsPrinter {
             GUILayout.EndScrollView();
             GUILayout.EndVertical();
             GUILayout.EndHorizontal();
-        }
-
-        private void CopyToClipboard()
-        {
-            var sb = new StringBuilder();
-
-            for (int dataIndex = 0; dataIndex < ContextRoot.containersData.Count; dataIndex++) {
-                var data = ContextRoot.containersData[dataIndex];
-                var bindings = data.container.GetBindings();
-                sb.AppendFormat("[{1}] {0} ({2} | {3})\n", data.container.GetType().FullName, dataIndex,
-                    data.container.identifier, data.destroyOnLoad ? "destroy on load" : "singleton");
-
-                for (int bindingIndex = 0; bindingIndex < bindings.Count; bindingIndex++) {
-                    var binding = bindings[bindingIndex];
-
-                    sb.AppendLine(binding.ToString());
-                }
-            }
-
-            var te = new TextEditor();
-            te.text = sb.ToString();
-            te.SelectAll();
-            te.Copy();
         }
     }
 }

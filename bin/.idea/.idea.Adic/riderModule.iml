@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RIDER_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../.." />
+    <content url="file://$MODULE_DIR$/../../../src/Assets/Adic/Scripts/Extensions" />
+    <content url="file://$MODULE_DIR$/../../../src/Assets/Adic/Scripts/Framework/Attributes" />
+    <content url="file://$MODULE_DIR$/../../../src/Assets/Adic/Scripts/Framework/Binding" />
+    <content url="file://$MODULE_DIR$/../../../src/Assets/Adic/Scripts/Framework/Cache" />
+    <content url="file://$MODULE_DIR$/../../../src/Assets/Adic/Scripts/Framework/Container" />
+    <content url="file://$MODULE_DIR$/../../../src/Assets/Adic/Scripts/Framework/Exceptions" />
+    <content url="file://$MODULE_DIR$/../../../src/Assets/Adic/Scripts/Framework/Injection" />
+    <content url="file://$MODULE_DIR$/../../../src/Assets/Adic/Scripts/Framework/Types" />
+    <content url="file://$MODULE_DIR$/../../../src/Assets/Adic/Scripts/Framework/Util" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

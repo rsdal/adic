@@ -1,0 +1,17 @@
+{
+    "name": "AdicBehavioursEditor",
+    "references": [
+        "GUID:c25440399fef38e47b80377ee83963dd"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
